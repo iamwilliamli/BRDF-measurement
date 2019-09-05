@@ -28,6 +28,5 @@ def GGX_D(roughness, theta):
     cos_theta = np.cos(theta)
     tan_theta = np.tan(theta)
 
-    return roughness * roughness / (
-                np.pi * np.power(cos_theta, 4) * np.power(roughness * roughness + np.power(tan_theta, 2), 2))
+    return roughness * roughness / (np.pi * np.power(cos_theta, 4) * np.power(roughness * roughness + np.power(tan_theta, 2), 2))
 

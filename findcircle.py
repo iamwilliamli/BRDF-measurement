@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 
-bgr_img = cv2.imread('test.jpeg') # read as it is
+bgr_img = cv2.imread('volleyball.jpg') # read as it is
 
 if bgr_img.shape[-1] == 3:           # color image
     b,g,r = cv2.split(bgr_img)       # get b,g,r
