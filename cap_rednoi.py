@@ -1,14 +1,13 @@
 import cv2
 import time
 import numpy as np
+from matplotlib import pyplot as plt
 import os
 from xlwt import Workbook
 # 引入相机矩阵
 import recammat
 mtx, dist = recammat.recammat()
 print(mtx)
-
-
 
 
 
@@ -23,6 +22,7 @@ sheet1.write(0, 0, 'Picture Number')
 sheet1.write(0, 1, 'Brightness')
 while (1):
     cap = cv2.VideoCapture(camera)
+    # cap.set(cv2.CAP_PROP_EXPOSURE, 0) #useless
     ret, frame = cap.read()
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     k = cv2.waitKey(1)
@@ -57,6 +57,8 @@ while (1):
         # 图片的亮度 float类型
         abs_bright = np.sum(sumpic, dtype=np.float32)
         print(sumpic)
+
+
 
         sheet1.write(int(j)+1 , 0, 'final ' + str(j) + '.jpg')
         sheet1.write(int(j)+1, 1, str(float(abs_bright)))
