@@ -12,7 +12,7 @@ print(mtx)
 
 
 # 显示图像，按下s键时开始采集十秒内的十张照片
-camera = int(1)# 使用webcam：1
+camera = int(0)# 使用webcam：1
 i = 0
 j = int(input('目前最后的数据：(重新开始输入0, 如果没有的话输入目前测量的最后数据号）： ')) # 如果没有的话输入目前测量的最后数据值
 # 数据进行excel表格保存
@@ -23,8 +23,14 @@ sheet1.write(0, 1, 'Brightness')
 while (1):
     cap = cv2.VideoCapture(camera)
     # cap.set(cv2.CAP_PROP_EXPOSURE, 0) #useless
+
     ret, frame = cap.read()
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+
+    #划线
+    cv2.line(gray, (0, 240), (640, 240), (255, 0, 0), 5)# 横线
+    cv2.line(gray, (320, 0), (320, 480), (255, 0, 0), 5)# 竖线
+
     k = cv2.waitKey(1)
     if k == 27:
         break
