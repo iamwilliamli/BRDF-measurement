@@ -4,11 +4,14 @@ import numpy as np
 from matplotlib import pyplot as plt
 import os
 from xlwt import Workbook
+import calculator
+
+
+
 # 引入相机矩阵
 import recammat
 mtx, dist = recammat.recammat()
 print(mtx)
-
 
 
 # 显示图像，按下s键时开始采集十秒内的十张照片
@@ -55,6 +58,7 @@ while (1):
         dst = cv2.undistort(sumpic, mtx, dist, None, mtx)
 
 
+
         # 改变视角、计算图片中心4*4像素
         rows, cols = dst.shape
         center = dst[240,320]
@@ -71,6 +75,7 @@ while (1):
         abs_bright = np.sum(sumpic, dtype=np.float32)
 
 
+
         sheet1.write(int(j)+1 , 0, 'final ' + str(j) + '.jpg')
         sheet1.write(int(j)+1, 1, str(float(abs_bright)))
         sheet1.write(int(j) + 1, 2, str(float(center)))
@@ -85,7 +90,7 @@ while (1):
         for i in range(0, 10):
             os.remove('/Users/William/brdfm/test_photo/test ' + str(i) + '.jpg')
     except FileNotFoundError:
-        print("别墨迹，赶紧拍摄！")
+        time.sleep(0)
 cap.release()
 
 
