@@ -20,6 +20,8 @@ wb = Workbook()
 sheet1 = wb.add_sheet('Brightness data')
 sheet1.write(0, 0, 'Picture Number')
 sheet1.write(0, 1, 'Brightness')
+sheet1.write(0, 2, 'Center Value')
+
 while (1):
     cap = cv2.VideoCapture(camera)
     # cap.set(cv2.CAP_PROP_EXPOSURE, 0) #useless
@@ -30,6 +32,7 @@ while (1):
     #划线
     cv2.line(gray, (0, 240), (640, 240), (255, 0, 0), 5)# 横线
     cv2.line(gray, (320, 0), (320, 480), (255, 0, 0), 5)# 竖线
+    #cv2.line(gray, )
 
     k = cv2.waitKey(1)
     if k == 27:
@@ -42,20 +45,22 @@ while (1):
             cv2.imwrite('/Users/William/brdfm/test_photo/test ' + str(i) + '.jpg', gray)
             time.sleep(0.1)
         # 降噪算法：进行均值运算
-        sumpic = np.zeros((480, 640, 3)) # 720 1280  480 640
+        sumpic = np.zeros((480, 640)) # 720 1280  480 640
         for i in range(0, 10):
-            img = cv2.imread('/Users/William/brdfm/test_photo/test ' + str(i) + '.jpg')
+            img = cv2.imread('/Users/William/brdfm/test_photo/test ' + str(i) + '.jpg',cv2.IMREAD_GRAYSCALE)
             sumpic = sumpic + img
         sumpic = sumpic / 10
 
-        h, w = sumpic.shape[:2]
-        newcameramtx, roi = cv2.getOptimalNewCameraMatrix(mtx, dist, (w, h), 1, (w, h))
-        # undistort
-        dst = cv2.undistort(sumpic, mtx, dist, None, newcameramtx)
-        x, y, w, h = roi
-        dst = dst[y:y + h, x:x + w]
-        
-        blinn = dst(240,320)
+
+        dst = cv2.undistort(sumpic, mtx, dist, None, mtx)
+
+
+        # 改变视角、计算图片中心4*4像素
+        rows, cols = dst.shape
+        center = dst[240,320]
+        print(center)
+
+
 
 
 
@@ -64,12 +69,12 @@ while (1):
         print("Sum of arr(float32) : ", np.sum(sumpic, dtype=np.float32))
         # 图片的亮度 float类型
         abs_bright = np.sum(sumpic, dtype=np.float32)
-        print(sumpic)
-
 
 
         sheet1.write(int(j)+1 , 0, 'final ' + str(j) + '.jpg')
         sheet1.write(int(j)+1, 1, str(float(abs_bright)))
+        sheet1.write(int(j) + 1, 2, str(float(center)))
+
         wb.save('brightness data.xls')
 
         cv2.destroyAllWindows()

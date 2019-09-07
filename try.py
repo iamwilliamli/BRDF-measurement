@@ -1,47 +1,79 @@
-import numpy as np
 import cv2
-import glob
+import time
+import numpy as np
+from matplotlib import pyplot as plt
+import os
+from xlwt import Workbook
+# 引入相机矩阵
+import recammat
 
-def recammat():
+mtx, dist = recammat.recammat()
+print(mtx)
 
-    # termination criteria
-    criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 30, 0.001)
+# 显示图像，按下s键时开始采集十秒内的十张照片
+camera = int(1)  # 使用webcam：1
+i = 0
+j = int(input('目前最后的数据：(重新开始输入0, 如果没有的话输入目前测量的最后数据号）： '))  # 如果没有的话输入目前测量的最后数据值
+# 数据进行excel表格保存
+wb = Workbook()
+sheet1 = wb.add_sheet('Brightness data')
+sheet1.write(0, 0, 'Picture Number')
+sheet1.write(0, 1, 'Brightness')
+while (1):
+    cap = cv2.VideoCapture(camera)
+    # cap.set(cv2.CAP_PROP_EXPOSURE, 0) #useless
 
-    # prepare object points, like (0,0,0), (1,0,0), (2,0,0) ....,(6,5,0)
-    objp = np.zeros((7*9,3), np.float32)
-    objp[:,:2] = np.mgrid[0:9,0:7].T.reshape(-1,2)*20 #20 mm of square
+    ret, frame = cap.read()
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
-    # Arrays to store object points and image points from all the images.
-    objpoints = [] # 3d point in real world space
-    imgpoints = [] # 2d points in image plane.
+    # 划线
+    cv2.line(gray, (0, 240), (640, 240), (255, 0, 0), 5)  # 横线
+    cv2.line(gray, (320, 0), (320, 480), (255, 0, 0), 5)  # 竖线
 
-    images = glob.glob('/Users/William/brdfm/restor/*.jpg')
+    k = cv2.waitKey(1)
+    if k == 27:
+        break
+    elif k == ord('s'):
+        for i in range(0, 10):
+            cap = cv2.VideoCapture(camera)
+            ret, frame = cap.read()
+            gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+            cv2.imwrite('/Users/William/brdfm/test_photo/test ' + str(i) + '.jpg', gray)
+            time.sleep(0.1)
+        # 降噪算法：进行均值运算
+        sumpic = np.zeros((480, 640, 3))  # 720 1280  480 640
+        for i in range(0, 10):
+            img = cv2.imread('/Users/William/brdfm/test_photo/test ' + str(i) + '.jpg')
+            sumpic = sumpic + img
+        sumpic = sumpic / 10
 
-    for fname in images:
-        img = cv2.imread(fname)
-        gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
-
-        # Find the chess board corners
-        ret, corners = cv2.findChessboardCorners(gray, (9,7),None)
-
-        # If found, add object points, image points (after refining them)
-        if ret == True:
-            objpoints.append(objp)
-
-            corners2 = cv2.cornerSubPix(gray,corners,(11,11),(-1,-1),criteria)
-
-            imgpoints.append(corners2)
+        h, w = sumpic.shape[:2]
+        newcameramtx, roi = cv2.getOptimalNewCameraMatrix(mtx, dist, (w, h), 1, (w, h))
+        # undistort
+        print(newcameramtx)
+        dst = cv2.undistort(sumpic, mtx, dist, None, newcameramtx)
+        x, y, w, h = roi
+        dst = dst[y:y + h, x:x + w]
 
 
-            # Draw and display the corners 可以取消掉
-            #img = cv2.drawChessboardCorners(img, (9,7), corners2,ret)
-            #cv2.imshow('img',img)
-            #cv2.waitKey(700)
+        cv2.imwrite('/Users/William/brdfm/test_photo/final ' + str(j) + '.jpg', dist)
+        # 计算一张图片的亮度值
+        #print("Sum of arr(float32) : ", np.sum(sumpic, dtype=np.float32))
+        # 图片的亮度 float类型
+        abs_bright = np.sum(sumpic, dtype=np.float32)
+        #print(sumpic)
 
-    #cv2.destroyAllWindows()
+        sheet1.write(int(j) + 1, 0, 'final ' + str(j) + '.jpg')
+        sheet1.write(int(j) + 1, 1, str(float(abs_bright)))
+        wb.save('brightness data.xls')
 
-    ret, mtx, dist, rvecs, tvecs = cv2.calibrateCamera(objpoints, imgpoints, gray.shape[::-1],None,None)
-    print(mtx,dist)
-    return mtx, dist
-
-recammat()
+        cv2.destroyAllWindows()
+        j = j + 1
+    cv2.imshow("capture", gray)
+    # 收集图片合成销毁
+    try:
+        for i in range(0, 10):
+            os.remove('/Users/William/brdfm/test_photo/test ' + str(i) + '.jpg')
+    except FileNotFoundError:
+        print("别墨迹，赶紧拍摄！")
+cap.release()
