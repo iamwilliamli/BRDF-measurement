@@ -12,7 +12,7 @@ print(mtx)
 
 
 # 显示图像，按下s键时开始采集十秒内的十张照片
-camera = int(0)# 使用webcam：1
+camera = int(1)# 使用webcam：1
 i = 0
 j = int(input('目前最后的数据：(重新开始输入0, 如果没有的话输入目前测量的最后数据号）： ')) # 如果没有的话输入目前测量的最后数据值
 # 数据进行excel表格保存
@@ -54,6 +54,8 @@ while (1):
         dst = cv2.undistort(sumpic, mtx, dist, None, newcameramtx)
         x, y, w, h = roi
         dst = dst[y:y + h, x:x + w]
+        
+        blinn = dst(240,320)
 
 
 
