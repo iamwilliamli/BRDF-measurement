@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b48460f6-378b-4cbe-bccf-c9de9ce649ff" name="Default" comment="new libs">
+    <list default="true" id="b48460f6-378b-4cbe-bccf-c9de9ce649ff" name="Default" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/brdffunc.py" beforeDir="false" afterPath="$PROJECT_DIR$/brdffunc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculator.py" beforeDir="false" afterPath="$PROJECT_DIR$/calculator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/curve_fitting.py" beforeDir="false" afterPath="$PROJECT_DIR$/curve_fitting.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +46,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.curve_fitting">
+  <component name="RunManager" selected="Python.brdffunc">
     <configuration name="brdffunc" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="brdfm" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -168,9 +166,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.brdffunc" />
         <item itemvalue="Python.curve_fitting" />
         <item itemvalue="Python.calculator" />
-        <item itemvalue="Python.brdffunc" />
         <item itemvalue="Python.cap_rednoi" />
         <item itemvalue="Python.try" />
       </list>
@@ -186,7 +184,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1567649938790</updated>
-      <workItem from="1567915872599" duration="3178000" />
+      <workItem from="1567915872599" duration="5541000" />
     </task>
     <task id="LOCAL-00001" summary="add Camera Calibration">
       <created>1567653709780</created>
@@ -272,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567916242505</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="update">
+      <created>1567935492645</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1567935492645</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -306,10 +311,12 @@
     <MESSAGE value="9/7/2019" />
     <MESSAGE value="new lib" />
     <MESSAGE value="new libs" />
-    <option name="LAST_COMMIT_MESSAGE" value="new libs" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/brdfm$calculator.coverage" NAME="calculator Coverage Results" MODIFIED="1567915918457" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/brdfm$curve_fitting.coverage" NAME="curve_fitting Coverage Results" MODIFIED="1567933366742" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/brdfm$curve_fitting.coverage" NAME="curve_fitting Coverage Results" MODIFIED="1567940052463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/brdfm$brdffunc.coverage" NAME="brdffunc Coverage Results" MODIFIED="1567941986636" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
