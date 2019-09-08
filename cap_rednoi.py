@@ -40,6 +40,8 @@ sheet1 = wb.add_sheet('Brightness data')
 sheet1.write(0, 0, 'Picture Number')
 sheet1.write(0, 1, 'Brightness')
 sheet1.write(0, 2, 'Center Value')
+sheet1.write(0, 3, 'Incident angle')
+sheet1.write(0, 4, 'Reflective angle')
 
 while (1):
     cap = cv2.VideoCapture(camera)
