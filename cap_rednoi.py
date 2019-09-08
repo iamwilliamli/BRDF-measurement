@@ -5,6 +5,22 @@ from matplotlib import pyplot as plt
 import os
 from xlwt import Workbook
 import calculator
+import brdffunc
+
+# Math Calculation Vector form
+theta_i = float(input('输入光源天顶角角度: ')) # Input the Zenith angle of the light source
+theta_r = float(input('输入相机天顶角角度： ')) # input the Zenith angle of the camera
+phi_i = 0 #光源方位角固定为0 Azimuth angle of light source is fixed to zero
+phi_r = float(input('输入相机方位角: '))
+incident_vector = calculator.incident(theta_i, phi_i) # 入射光向量
+camera_vector = calculator.view(theta_r, phi_r) # 出射光线向量
+normal = calculator.normal() # 平面法向量
+half_angle = calculator.half(theta_i, phi_i, theta_r, phi_r) # 半角向量 H
+delta_angle = calculator.delta(half_angle, normal)
+alpha_angle = calculator.alpha(incident_vector, camera_vector)
+print(alpha_angle)
+print(delta_angle)
+
 
 
 

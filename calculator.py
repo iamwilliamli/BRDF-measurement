@@ -1,5 +1,6 @@
 import numpy as np
-import pandas as pd
+
+np.seterr(divide='ignore', invalid='ignore')
 
 def incident(theta_i, phi_i):
     return np.array([np.sin(theta_i)*np.cos(phi_i), np.sin(theta_i)*np.cos(phi_i),np.cos(phi_i)])
@@ -18,7 +19,7 @@ def normalize(array):
     return normalized_v
 
 def delta(half, normal):
-    return np.dot(half, normal())/normalize(half)
+    return np.dot(half, normal/normalize(half))
 
 def alpha(incident, view):
     return normalize(np.dot(incident, view))/2

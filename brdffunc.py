@@ -42,3 +42,6 @@ def G_shadow(alpha, delta, theta_r, theta_i):
 
 def Fresnel(C_spec, alpha):
     return C_spec+(1-C_spec)*np.power(1-np.cos(alpha), 5)
+
+def BRDF_known(D, F, G, theta_i, theta_r):
+    return D*F*G/(4*np.cos(theta_i)*np.cos(theta_r))
