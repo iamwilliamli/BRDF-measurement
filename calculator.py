@@ -1,5 +1,5 @@
 import numpy as np
-import pandas
+import pandas as pd
 
 def incident(theta_i, phi_i):
     return np.array([np.sin(theta_i)*np.cos(phi_i), np.sin(theta_i)*np.cos(phi_i),np.cos(phi_i)])
