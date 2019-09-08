@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
-import scipy.stats as stats
+
 
 #import matplotlib.pyplot as plt
 # 引用自CSDN
@@ -30,3 +30,6 @@ def GGX_D(roughness, theta):
 
     return roughness * roughness / (np.pi * np.power(cos_theta, 4) * np.power(roughness * roughness + np.power(tan_theta, 2), 2))
 
+def BRDF(m, delta, G, F, theta_i, theta_r):
+
+    D = np.exp(-(np.tan(delta)/m))
