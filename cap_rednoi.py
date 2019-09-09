@@ -8,18 +8,18 @@ import calculator
 import brdffunc
 
 # Math Calculation Vector form
-theta_i = float(input('输入光源天顶角角度: ')) # Input the Zenith angle of the light source
-theta_r = float(input('输入相机天顶角角度： ')) # input the Zenith angle of the camera
-phi_i = 0 #光源方位角固定为0 Azimuth angle of light source is fixed to zero
-phi_r = float(input('输入相机方位角: '))
-incident_vector = calculator.incident(theta_i, phi_i) # 入射光向量
-camera_vector = calculator.view(theta_r, phi_r) # 出射光线向量
-normal = calculator.normal() # 平面法向量
-half_angle = calculator.half(theta_i, phi_i, theta_r, phi_r) # 半角向量 H
-delta_angle = calculator.delta(half_angle, normal)
-alpha_angle = calculator.alpha(incident_vector, camera_vector)
-print(alpha_angle)
-print(delta_angle)
+#theta_i = float(input('输入光源天顶角角度: ')) # Input the Zenith angle of the light source
+#theta_r = float(input('输入相机天顶角角度： ')) # input the Zenith angle of the camera
+#phi_i = 0 #光源方位角固定为0 Azimuth angle of light source is fixed to zero
+#phi_r = float(input('输入相机方位角: '))
+#incident_vector = calculator.incident(theta_i, phi_i) # 入射光向量
+#camera_vector = calculator.view(theta_r, phi_r) # 出射光线向量
+#normal = calculator.normal() # 平面法向量
+#half_angle = calculator.half(theta_i, phi_i, theta_r, phi_r) # 半角向量 H
+#delta_angle = calculator.delta(half_angle, normal)
+#alpha_angle = calculator.alpha(incident_vector, camera_vector)
+#print(alpha_angle)
+#print(delta_angle)
 
 
 
@@ -36,7 +36,10 @@ i = 0
 j = int(input('目前最后的数据：(重新开始输入0, 如果没有的话输入目前测量的最后数据号）： ')) # 如果没有的话输入目前测量的最后数据值
 # 数据进行excel表格保存
 wb = Workbook()
-sheet1 = wb.add_sheet('Brightness data')
+incident_angle = input('输入入射天顶角：')
+chushetianding = input('输入出射天顶角： ')
+chushefangwei = input('输入出射方位角： ')
+sheet1 = wb.add_sheet('Brightness data' +'(' + str(incident_angle) + ', '+str(chushetianding)+', '+str(chushefangwei) + ')')
 sheet1.write(0, 0, 'Picture Number')
 sheet1.write(0, 1, 'Brightness')
 sheet1.write(0, 2, 'Center Value')
@@ -44,19 +47,6 @@ sheet1.write(0, 3, 'Incident angle')
 sheet1.write(0, 4, 'Reflective angle')
 
 while (1):
-    # Math Calculation Vector form
-    theta_i = float(input('输入光源天顶角角度: '))  # Input the Zenith angle of the light source
-    theta_r = float(input('输入相机天顶角角度： '))  # input the Zenith angle of the camera
-    phi_i = 0  # 光源方位角固定为0 Azimuth angle of light source is fixed to zero
-    phi_r = float(input('输入相机方位角: '))
-    incident_vector = calculator.incident(theta_i, phi_i)  # 入射光向量
-    camera_vector = calculator.view(theta_r, phi_r)  # 出射光线向量
-    normal = calculator.normal()  # 平面法向量
-    half_angle = calculator.half(theta_i, phi_i, theta_r, phi_r)  # 半角向量 H
-    delta_angle = calculator.delta(half_angle, normal)
-    alpha_angle = calculator.alpha(incident_vector, camera_vector)
-    print(alpha_angle)
-    print(delta_angle)
 
     cap = cv2.VideoCapture(camera)
     # cap.set(cv2.CAP_PROP_EXPOSURE, 0) #useless
@@ -87,20 +77,16 @@ while (1):
         sumpic = sumpic / 10
 
 
-        dst = cv2.undistort(sumpic, mtx, dist, None, mtx)
+        #dst = cv2.undistort(sumpic, mtx, dist, None, mtx)
 
 
 
         # 改变视角、计算图片中心4*4像素 多找几个像素点
-        rows, cols = dst.shape
-        center = dst[240,320]
+        rows, cols = sumpic.shape
+        center = sumpic[240,320]
         print(center)
 
-
-
-
-
-        cv2.imwrite('/Users/William/brdfm/test_photo/final ' + str(j) + '.jpg', dst)
+        cv2.imwrite('/Users/William/brdfm/test_photo/final ' + str(j) + '.jpg', sumpic)
         # 计算一张图片的亮度值
         print("Sum of arr(float32) : ", np.sum(sumpic, dtype=np.float32))
         # 图片的亮度 float类型
@@ -112,7 +98,7 @@ while (1):
         sheet1.write(int(j)+1, 1, str(float(abs_bright)))
         sheet1.write(int(j) + 1, 2, str(float(center)))
 
-        wb.save('brightness data.xls')
+        wb.save('Brightness data' +'(' + str(incident_angle) + ', '+str(chushetianding)+', '+str(chushefangwei) + ')')
 
         cv2.destroyAllWindows()
         j = j+1

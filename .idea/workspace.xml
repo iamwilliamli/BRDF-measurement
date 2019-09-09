@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b48460f6-378b-4cbe-bccf-c9de9ce649ff" name="Default" comment="9/9 before presentation">
+    <list default="true" id="b48460f6-378b-4cbe-bccf-c9de9ce649ff" name="Default" comment="need to add camera position estimation">
       <change afterPath="$PROJECT_DIR$/venv/bin/runxlrd.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/pandas-0.25.1.dist-info/AUTHORS.md" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/pandas-0.25.1.dist-info/INSTALLER" afterDir="false" />
@@ -2454,9 +2454,30 @@
       <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/xlrd/xldate.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/xlrd/xlsx.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brdffunc.py" beforeDir="false" afterPath="$PROJECT_DIR$/brdffunc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/brightness data.xls" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cap_rednoi.py" beforeDir="false" afterPath="$PROJECT_DIR$/cap_rednoi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/try.py" beforeDir="false" afterPath="$PROJECT_DIR$/try.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw_plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/draw_plot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_photo/final 0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/test_photo/final 0.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_photo/final 1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/test_photo/final 1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_photo/final 10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/test_photo/final 10.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_photo/final 11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/test_photo/final 11.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_photo/final 12.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/test_photo/final 12.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_photo/final 13.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/test_photo/final 13.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_photo/final 14.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/test_photo/final 14.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_photo/final 15.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/test_photo/final 15.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_photo/final 16.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/test_photo/final 16.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_photo/final 19.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/test_photo/final 19.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_photo/final 2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/test_photo/final 2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_photo/final 20.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/test_photo/final 20.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_photo/final 21.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/test_photo/final 21.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_photo/final 22.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/test_photo/final 22.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_photo/final 3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/test_photo/final 3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_photo/final 4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/test_photo/final 4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_photo/final 5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/test_photo/final 5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_photo/final 6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/test_photo/final 6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_photo/final 7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/test_photo/final 7.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_photo/final 8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/test_photo/final 8.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_photo/final 9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/test_photo/final 9.jpg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -2511,7 +2532,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.try">
+  <component name="RunManager" selected="Python.draw_plot">
     <configuration name="brdffunc" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="brdfm" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -2631,9 +2652,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.try" />
-        <item itemvalue="Python.cap_rednoi" />
         <item itemvalue="Python.draw_plot" />
+        <item itemvalue="Python.cap_rednoi" />
+        <item itemvalue="Python.try" />
         <item itemvalue="Python.calculator" />
         <item itemvalue="Python.brdffunc" />
       </list>
@@ -2649,7 +2670,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1567649938790</updated>
-      <workItem from="1567915872599" duration="18079000" />
+      <workItem from="1567915872599" duration="26054000" />
     </task>
     <task id="LOCAL-00001" summary="add Camera Calibration">
       <created>1567653709780</created>
@@ -2770,7 +2791,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567970255129</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="need to add camera position estimation">
+      <created>1567995193564</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1567995193564</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -2808,14 +2836,15 @@
     <MESSAGE value="update formulae" />
     <MESSAGE value="9/8 need to convert degree to radian" />
     <MESSAGE value="9/9 before presentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="9/9 before presentation" />
+    <MESSAGE value="need to add camera position estimation" />
+    <option name="LAST_COMMIT_MESSAGE" value="need to add camera position estimation" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/brdfm$curve_fitting.coverage" NAME="curve_fitting Coverage Results" MODIFIED="1567940052463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/brdfm$calculator.coverage" NAME="calculator Coverage Results" MODIFIED="1567943234126" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/brdfm$brdffunc.coverage" NAME="brdffunc Coverage Results" MODIFIED="1567941986636" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/brdfm$cap_rednoi.coverage" NAME="cap_rednoi Coverage Results" MODIFIED="1567991284479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/brdfm$try.coverage" NAME="try Coverage Results" MODIFIED="1567991760392" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/brdfm$draw_plot.coverage" NAME="draw_plot Coverage Results" MODIFIED="1567991276665" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/brdfm$cap_rednoi.coverage" NAME="cap_rednoi Coverage Results" MODIFIED="1568017358494" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/brdfm$draw_plot.coverage" NAME="draw_plot Coverage Results" MODIFIED="1568017943829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
