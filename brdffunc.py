@@ -7,7 +7,7 @@ import numpy as np
 
 def TorranceSparrow_D(roughness, theta):
     c = 1
-    return c * np.exp(-np.power(theta/roughness,2))
+    return c * np.exp(-np.power(theta/roughness, 2))
 
 def Phong_D(roughness, theta):
     return (roughness + 2)/(2*np.pi)*np.power(np.cos(theta), roughness)

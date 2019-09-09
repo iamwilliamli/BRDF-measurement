@@ -44,6 +44,20 @@ sheet1.write(0, 3, 'Incident angle')
 sheet1.write(0, 4, 'Reflective angle')
 
 while (1):
+    # Math Calculation Vector form
+    theta_i = float(input('输入光源天顶角角度: '))  # Input the Zenith angle of the light source
+    theta_r = float(input('输入相机天顶角角度： '))  # input the Zenith angle of the camera
+    phi_i = 0  # 光源方位角固定为0 Azimuth angle of light source is fixed to zero
+    phi_r = float(input('输入相机方位角: '))
+    incident_vector = calculator.incident(theta_i, phi_i)  # 入射光向量
+    camera_vector = calculator.view(theta_r, phi_r)  # 出射光线向量
+    normal = calculator.normal()  # 平面法向量
+    half_angle = calculator.half(theta_i, phi_i, theta_r, phi_r)  # 半角向量 H
+    delta_angle = calculator.delta(half_angle, normal)
+    alpha_angle = calculator.alpha(incident_vector, camera_vector)
+    print(alpha_angle)
+    print(delta_angle)
+
     cap = cv2.VideoCapture(camera)
     # cap.set(cv2.CAP_PROP_EXPOSURE, 0) #useless
 
@@ -77,7 +91,7 @@ while (1):
 
 
 
-        # 改变视角、计算图片中心4*4像素
+        # 改变视角、计算图片中心4*4像素 多找几个像素点
         rows, cols = dst.shape
         center = dst[240,320]
         print(center)
