@@ -47,7 +47,7 @@ alpha_angle = alpha(incident_vector, camera_vector)
 #print(alpha_angle)
 #print(delta_angle)
 
-
+print(delta_angle)
 d = b.Beckmann_D(1, delta_angle)
 #d = b.CT_D(delta_angle)
 #print(d)
