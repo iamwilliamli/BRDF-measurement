@@ -62,7 +62,6 @@ while (1):
         #dst = cv2.undistort(sumpic, mtx, dist, None, mtx)
 
 
-
         # 改变视角、计算图片中心40*40像素 多找几个像素点
         #rows, cols = sumpic.shape
         center = 0
