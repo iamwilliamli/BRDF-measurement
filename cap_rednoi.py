@@ -4,24 +4,6 @@ import numpy as np
 from matplotlib import pyplot as plt
 import os
 from xlwt import Workbook
-import calculator
-import brdffunc
-
-# Math Calculation Vector form
-#theta_i = float(input('输入光源天顶角角度: ')) # Input the Zenith angle of the light source
-#theta_r = float(input('输入相机天顶角角度： ')) # input the Zenith angle of the camera
-#phi_i = 0 #光源方位角固定为0 Azimuth angle of light source is fixed to zero
-#phi_r = float(input('输入相机方位角: '))
-#incident_vector = calculator.incident(theta_i, phi_i) # 入射光向量
-#camera_vector = calculator.view(theta_r, phi_r) # 出射光线向量
-#normal = calculator.normal() # 平面法向量
-#half_angle = calculator.half(theta_i, phi_i, theta_r, phi_r) # 半角向量 H
-#delta_angle = calculator.delta(half_angle, normal)
-#alpha_angle = calculator.alpha(incident_vector, camera_vector)
-#print(alpha_angle)
-#print(delta_angle)
-
-
 
 
 # 引入相机矩阵
@@ -33,13 +15,13 @@ print(mtx)
 # 显示图像，按下s键时开始采集十秒内的十张照片
 camera = int(1)# 使用webcam：1
 i = 0
-j = int(input('目前最后的数据：(重新开始输入0, 如果没有的话输入目前测量的最后数据号）： ')) # 如果没有的话输入目前测量的最后数据值
+j = 0
 # 数据进行excel表格保存
 wb = Workbook()
 incident_angle = input('输入入射天顶角：')
 chushetianding = input('输入出射天顶角： ')
 chushefangwei = input('输入出射方位角： ')
-sheet1 = wb.add_sheet('Brightness data' +'(' + str(incident_angle) + ', '+str(chushetianding)+', '+str(chushefangwei) + ')')
+sheet1 = wb.add_sheet('Brightness data' +'(' + str(incident_angle) + ', '+str(chushetianding)+', '+str(chushefangwei) + ')' + '.xls')
 sheet1.write(0, 0, 'Picture Number')
 sheet1.write(0, 1, 'Brightness')
 sheet1.write(0, 2, 'Center Value')
@@ -81,9 +63,16 @@ while (1):
 
 
 
-        # 改变视角、计算图片中心4*4像素 多找几个像素点
-        rows, cols = sumpic.shape
-        center = sumpic[240,320]
+        # 改变视角、计算图片中心40*40像素 多找几个像素点
+        #rows, cols = sumpic.shape
+        center = 0
+        for rows in range(235, 246):
+            for cols in range(315,326):
+                center = center + sumpic[rows, cols]
+
+        center = center/100
+        #center = center/255
+
         print(center)
 
         cv2.imwrite('/Users/William/brdfm/test_photo/final ' + str(j) + '.jpg', sumpic)
@@ -98,7 +87,7 @@ while (1):
         sheet1.write(int(j)+1, 1, str(float(abs_bright)))
         sheet1.write(int(j) + 1, 2, str(float(center)))
 
-        wb.save('Brightness data' +'(' + str(incident_angle) + ', '+str(chushetianding)+', '+str(chushefangwei) + ')')
+        wb.save('Brightness data' +'(' + str(incident_angle) + ', '+str(chushetianding)+', '+str(chushefangwei) + ')' + '.xls')
 
         cv2.destroyAllWindows()
         j = j+1

@@ -3,7 +3,7 @@ import numpy as np
 
 
 #import matplotlib.pyplot as plt
-# 引用自CSDN
+
 
 def TorranceSparrow_D(roughness, theta):
     c = 1

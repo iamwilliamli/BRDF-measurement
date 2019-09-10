@@ -9,7 +9,7 @@ data_file = pd.read_excel('/Users/William/brdfm/brightness data' +'(' + str(inci
 data_new = data_file[['Center Value', 'Reflective angle']]
 print(data_new.head())
 plt.plot(data_new['Reflective angle'], data_new['Center Value'], 'bo-',label=u"BRDF Curve",linewidth=1)
-plt.title('Incident angle = ' + str(incident_angle) + 'degree')
+plt.title('Incident angle = ' + str(incident_angle) + ' degree '+ 'Viewing Azimuth angle = '+str(chushefangwei) + ' degree')
 plt.legend()
 
 plt.xlabel(u"Azimuth Viewing Angle")
