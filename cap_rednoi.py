@@ -69,7 +69,7 @@ while (1):
             for cols in range(315,326):
                 center = center + sumpic[rows, cols]
 
-        center = center/100
+        center = center/100 #实际上应该是121
         #center = center/255
 
         print(center)
