@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b48460f6-378b-4cbe-bccf-c9de9ce649ff" name="Default" comment="experiment">
+      <change afterPath="$PROJECT_DIR$/Aruco_Tracker/calib_images/sphere.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cammat.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/venv/bin/runxlrd.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/pandas-0.25.1.dist-info/AUTHORS.md" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/pandas-0.25.1.dist-info/INSTALLER" afterDir="false" />
@@ -2454,8 +2456,16 @@
       <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/xlrd/xldate.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/xlrd/xlsx.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Aruco_Tracker/aruco_tracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/Aruco_Tracker/aruco_tracker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Aruco_Tracker/calib_images/left01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Aruco_Tracker/calib_images/left02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Aruco_Tracker/calib_images/left03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Aruco_Tracker/calib_images/left04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Aruco_Tracker/calib_images/left05.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Aruco_Tracker/calib_images/test.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Aruco_Tracker/pose_estimation.py" beforeDir="false" afterPath="$PROJECT_DIR$/Aruco_Tracker/pose_estimation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cap_rednoi.py" beforeDir="false" afterPath="$PROJECT_DIR$/cap_rednoi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exp.py" beforeDir="false" afterPath="$PROJECT_DIR$/exp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recammat.py" beforeDir="false" afterPath="$PROJECT_DIR$/recammat.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_photo/final 0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/test_photo/final 0.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_photo/final 1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/test_photo/final 1.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_photo/final 10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/test_photo/final 10.jpg" afterDir="false" />
@@ -2528,7 +2538,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Aruco_Tracker" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1QXTHnmBtqtboAM9hXeUmjsYhqG" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -2549,30 +2559,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.cap_rednoi">
-    <configuration name="aruco_tracker" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="brdfm" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Aruco_Tracker" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Aruco_Tracker/aruco_tracker.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="calculator" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.sphere">
+    <configuration name="cammat" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="brdfm" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -2585,7 +2573,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/calculator.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cammat.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -2616,7 +2604,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="draw_plot" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="exp" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="brdfm" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -2629,7 +2617,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/draw_plot.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/exp.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -2660,20 +2648,42 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="sphere" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="brdfm" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Aruco_Tracker/calib_images" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Aruco_Tracker/calib_images/sphere.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Python.aruco_tracker" />
       <item itemvalue="Python.pose_estimation" />
       <item itemvalue="Python.cap_rednoi" />
-      <item itemvalue="Python.draw_plot" />
-      <item itemvalue="Python.calculator" />
+      <item itemvalue="Python.exp" />
+      <item itemvalue="Python.cammat" />
+      <item itemvalue="Python.sphere" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.cap_rednoi" />
-        <item itemvalue="Python.draw_plot" />
-        <item itemvalue="Python.aruco_tracker" />
-        <item itemvalue="Python.calculator" />
+        <item itemvalue="Python.sphere" />
         <item itemvalue="Python.pose_estimation" />
+        <item itemvalue="Python.exp" />
+        <item itemvalue="Python.cammat" />
+        <item itemvalue="Python.cap_rednoi" />
       </list>
     </recent_temporary>
   </component>
@@ -2688,7 +2698,7 @@
       <option name="presentableId" value="Default" />
       <updated>1567649938790</updated>
       <workItem from="1567915872599" duration="42170000" />
-      <workItem from="1568097142878" duration="19887000" />
+      <workItem from="1568097142878" duration="29656000" />
     </task>
     <task id="LOCAL-00001" summary="add Camera Calibration">
       <created>1567653709780</created>
@@ -2844,7 +2854,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568123203349</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="experiment day 2">
+      <created>1568191999051</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1568191999057</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -2885,21 +2902,24 @@
     <MESSAGE value="need to add camera position estimation" />
     <MESSAGE value="add math formula" />
     <MESSAGE value="experiment" />
-    <option name="LAST_COMMIT_MESSAGE" value="experiment" />
+    <MESSAGE value="experiment day 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="experiment day 2" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/brdfm$calculator.coverage" NAME="calculator Coverage Results" MODIFIED="1568118188356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/brdfm$sphere.coverage" NAME="sphere Coverage Results" MODIFIED="1568211784405" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Aruco_Tracker/calib_images" />
     <SUITE FILE_PATH="coverage/brdfm$brdffunc.coverage" NAME="brdffunc Coverage Results" MODIFIED="1567941986636" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/brdfm$camposest.coverage" NAME="camposest Coverage Results" MODIFIED="1568081596240" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/brdfm$pose_estimation.coverage" NAME="pose_estimation Coverage Results" MODIFIED="1568097919353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Aruco_Tracker" />
-    <SUITE FILE_PATH="coverage/brdfm$aruco_tracker.coverage" NAME="aruco_tracker Coverage Results" MODIFIED="1568169382383" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Aruco_Tracker" />
-    <SUITE FILE_PATH="coverage/brdfm$cap_rednoi.coverage" NAME="cap_rednoi Coverage Results" MODIFIED="1568172668954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/brdfm$pose_estimation.coverage" NAME="pose_estimation Coverage Results" MODIFIED="1568210144997" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Aruco_Tracker" />
+    <SUITE FILE_PATH="coverage/brdfm$aruco_tracker.coverage" NAME="aruco_tracker Coverage Results" MODIFIED="1568206877961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Aruco_Tracker" />
+    <SUITE FILE_PATH="coverage/brdfm$cap_rednoi.coverage" NAME="cap_rednoi Coverage Results" MODIFIED="1568209516350" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/brdfm$camera_calibration.coverage" NAME="camera_calibration Coverage Results" MODIFIED="1568097898760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Aruco_Tracker" />
     <SUITE FILE_PATH="coverage/brdfm$extract_calibration.coverage" NAME="extract_calibration Coverage Results" MODIFIED="1568097902802" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Aruco_Tracker" />
     <SUITE FILE_PATH="coverage/brdfm$curve_fitting.coverage" NAME="curve_fitting Coverage Results" MODIFIED="1567940052463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/brdfm$cammat.coverage" NAME="cammat Coverage Results" MODIFIED="1568209840574" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/brdfm$try.coverage" NAME="try Coverage Results" MODIFIED="1567991760392" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/brdfm$biaoding.coverage" NAME="biaoding Coverage Results" MODIFIED="1568094129481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/brdfm$exp.coverage" NAME="exp Coverage Results" MODIFIED="1568094748018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/brdfm$draw_plot.coverage" NAME="draw_plot Coverage Results" MODIFIED="1568172632316" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/brdfm$exp.coverage" NAME="exp Coverage Results" MODIFIED="1568209962702" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

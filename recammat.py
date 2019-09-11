@@ -15,7 +15,7 @@ def recammat():
     objpoints = [] # 3d point in real world space
     imgpoints = [] # 2d points in image plane.
 
-    images = glob.glob('/Users/William/brdfm/biao/*.jpg')
+    images = glob.glob('calib_images/*.jpg')
 
     for fname in images:
         img = cv2.imread(fname)

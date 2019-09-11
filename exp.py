@@ -4,18 +4,16 @@ import numpy as np
 from matplotlib import pyplot as plt
 import math
 
-# 引入相机矩阵
-import recammat
-mtx, dist = recammat.recammat()
 
-object_3d_points = np.array(([0, 0, 0],
-                            [0, 200, 0],
-                            [150, 0, 0],
-                            [150, 200, 0]), dtype=np.double)
-object_2d_point = np.array(([2985, 1688],
-                            [5081, 1690],
-                            [2997, 2797],
-                            [5544, 2757]), dtype=np.double)
+
+object_3d_points = np.array(([-20, 20, 0],
+                            [20, 20, 0],
+                            [-20, 20, 0],
+                            [20, -20, 0]), dtype=np.double)
+object_2d_point = np.array(([237, 155],
+                            [398, 156],
+                            [237, 313],
+                            [397, 316]), dtype=np.double)
 camera_matrix = mtx
 dist_coefs = dist
 # 求解相机位姿
