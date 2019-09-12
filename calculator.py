@@ -26,34 +26,3 @@ def alpha(incident, view):
 
 def deg2rad(degree):
     return degree * np.pi /180
-
-
-# Math Calculation Vector form
-theta_i = deg2rad(float(input('输入光源天顶角角度: '))) # Input the Zenith angle of the light source
-theta_r = deg2rad(float(input('输入相机天顶角角度： '))) # input the Zenith angle of the camera
-phi_i = 0 #光源方位角固定为0 Azimuth angle of light source is fixed to zero
-phi_r = deg2rad(float(input('输入相机方位角: ')))
-
-
-
-
-incident_vector = incident(theta_i, phi_i) # 入射光向量
-camera_vector = view(theta_r, phi_r) # 出射光线向量
-normal = normal() # 平面法向量
-half_angle = half(theta_i, phi_i, theta_r, phi_r) # 半角向量 H
-delta_angle = delta(half_angle, normal)
-alpha_angle = alpha(incident_vector, camera_vector)
-#print(half_angle)
-#print(alpha_angle)
-#print(delta_angle)
-
-print(delta_angle)
-d = b.Beckmann_D(1, delta_angle)
-#d = b.CT_D(delta_angle)
-#print(d)
-f = b.Fresnel(0.919, alpha_angle)
-#print(f)
-g = b.G_shadow(alpha_angle, delta_angle, theta_r, theta_i)
-#print(g)
-known = b.BRDF_known(d, f, g, theta_i, theta_r)
-print(known)

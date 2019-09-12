@@ -65,9 +65,9 @@ while (1):
         # 改变视角、计算图片中心40*40像素 多找几个像素点
         #rows, cols = sumpic.shape
         center = 0
-        for rows in range(237, 397):
-            for cols in range(155,315):
-                n_p = np.array()
+        for rows in range(235, 246):
+            for cols in range(315,326):
+                center = center + sumpic[rows, cols]
 
         center = center/100 #实际上应该是121
         #center = center/255
